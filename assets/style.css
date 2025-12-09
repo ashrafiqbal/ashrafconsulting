@@ -86,8 +86,9 @@ body {
 }
 
 .hero h1 {
-  font-size: clamp(1.9rem, 3vw, 2.5rem);
-  margin-bottom: 10px;
+  font-size: clamp(28px, 5vw, 44px); 
+  margin: 0 0 10px; 
+  color: #d2e0f2;
 }
 
 .hero .sub {
@@ -185,3 +186,140 @@ h1, h2, h3 {
 }
 
 .footer a { color: var(--brand); text-decoration: none; }
+
+/* --- Brand: mini-logo + text + underline animation --- */
+
+.nav .brand {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #0a2540;              /* professional navy */
+  letter-spacing: 0.4px;
+  text-decoration: none;
+
+  padding: 6px 4px;
+  transition: color 0.25s ease, transform 0.2s ease;
+}
+
+/* Mini-logo pill before the text (AC = Ashraf Consulting) */
+.nav .brand::before {
+  content: "AC";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+
+  background: linear-gradient(135deg, #1e72ff, #0a2540);
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+
+  box-shadow: 0 2px 6px rgba(30, 114, 255, 0.35), 
+              inset 0 0 4px rgba(255, 255, 255, 0.15);
+
+  margin-right: 4px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.nav .brand:hover::before {
+  transform: scale(1.07);
+  box-shadow: 0 3px 8px rgba(30, 114, 255, 0.45), 
+              inset 0 0 6px rgba(255, 255, 255, 0.25);
+}
+
+
+/* Underline bar (hidden by default, animates in on hover) */
+.nav .brand::after {
+  content: "";
+  position: absolute;
+  left: 34px;            /* start after the pill */
+  right: 0;
+  bottom: 2px;
+
+  height: 2px;
+  background: #1e72ff;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+/* Hover state */
+.nav .brand:hover {
+  color: #1e72ff;
+  transform: translateY(-1px);
+}
+
+.nav .brand:hover::after {
+  transform: scaleX(1);
+}
+
+/* Make nav links visually consistent */
+.nav .links a {
+  text-decoration: none;
+  color: #0b2a4a;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.nav .links a:hover {
+  color: #1e72ff;
+}
+
+/* --- Responsive adjustments --- */
+@media (max-width: 768px) {
+  .nav .brand {
+    font-size: 1.25rem;
+    padding: 4px 0;
+  }
+
+  .nav .brand::before {
+    width: 24px;
+    height: 24px;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav .brand {
+    font-size: 1.1rem;
+    letter-spacing: 0.2px;
+  }
+}
+
+/* --- Light / dark mode tweaks for nav --- */
+@media (prefers-color-scheme: dark) {
+  .nav {
+    background: #050816;
+    border-bottom: 1px solid #1f2937;
+  }
+
+  .nav .brand {
+    color: #e5e7eb;
+  }
+
+  .nav .brand::before {
+    background: rgba(96, 165, 250, 0.18);
+    color: #60a5fa;
+  }
+
+  .nav .brand::after {
+    background: #60a5fa;
+  }
+
+  .nav .links a {
+    color: #e5e7eb;
+  }
+
+  .nav .links a:hover {
+    color: #93c5fd;
+  }
+}
+
