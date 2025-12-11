@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You • Ashraf Consulting</title>
+
+  <link rel="stylesheet" href="assets/style.css">
+
+  <style>
+    /* Page wrapper */
+    .thankyou-container {
+      max-width: 600px;
+      margin: 80px auto;
+      padding: 40px;
+      text-align: center;
+      background: #ffffff;
+      border-radius: 14px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    /* Animated checkmark */
+    .checkmark {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: #1e72ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px auto;
+      animation: pop 0.4s ease-out;
+    }
+
+    .checkmark svg {
+      width: 45px;
+      height: 45px;
+      stroke: #fff;
+    }
+
+    @keyframes pop {
+      0% { transform: scale(0.5); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    /* Heading and text */
+    .thankyou-container h1 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: #0a2540;
+    }
+
+    .thankyou-container p {
+      font-size: 1.05rem;
+      line-height: 1.5;
+      margin-bottom: 25px;
+      color: #4a5568;
+    }
+
+    /* Button */
+    .btn-home {
+      background: #1e72ff;
+      color: #fff;
+      padding: 12px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: background 0.25s ease;
+    }
+
+    .btn-home:hover {
+      background: #5590ff;
+    }
+
+    /* Responsive */
+    @media(max-width: 600px) {
+      .thankyou-container {
+        margin: 40px 20px;
+        padding: 30px 25px;
+      }
+      .thankyou-container h1 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="brand">Ashraf Consulting</a>
+    <div class="links">
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="#">Portfolio</a>
+      <a href="contact.html" class="cta">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="thankyou-container">
+
+      <div class="checkmark">
+        <!-- Checkmark SVG -->
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="3">
+          <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
+      <h1>Thank You!</h1>
+      <p>
+        Your message has been sent successfully.  
+        I appreciate you reaching out and I will respond as soon as possible.
+      </p>
+
+      <a href="index.html" class="btn-home">Back to Home</a>
+    </div>
+  </main>
+
+</body>
+</html>

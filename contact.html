@@ -4,11 +4,16 @@
   <title>Contact | Short-Term Salesforce Contractor</title>
   <meta name="description" content="Contact Salesforce contract developer for short-term and overflow work." />
   
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="icon" href="assets/favicon.ico" />
-<link rel="stylesheet" href="assets/style.css" />
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="stylesheet" href="assets/style.css" />
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <script>
+      function onSubmit() {
+          document.getElementById("myForm").submit()
+      }
+  </script>
 </head>
 <body>
   
@@ -37,19 +42,64 @@
     <h1>Contact</h1>
     <p>I am available for short-term Salesforce development contracts, sprint-based capacity, and overflow work.</p>
 
-    <p><strong>Email:</strong> <a href="ashraf@ashrafconsulting.ca">ashraf@ashrafconsulting.ca</a></p>
-    <p><strong>Business Mobile:</strong> <a href="tel:+12895887445">+1 (289) 588-7445</a></p>
-    <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/ashraf-iqbal-877b834" target="_blank" rel="noopener">https://linkedin.com/in/ashraf-iqbal-877b834</a></p>
-    <p><strong>Website:</strong> <a href="https://www.ashrafconsulting.ca" target="_blank" rel="noopener">https://www.ashrafconsulting.ca</a></p>
+    <!--<p><strong>Email:</strong> <a href="ashraf@ashrafconsulting.ca">ashraf@ashrafconsulting.ca</a></p>-->
+    <p>
+      <span class="icon email-icon">
+        <!-- Email SVG -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M4 4h16v16H4V4zm0 0l8 8 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+      </span>
+      
+      <a href="mailto:ashraf@ashrafconsulting.ca">ashraf@ashrafconsulting.ca</a>
+    </p>
+    <!--<p><strong>Business Mobile:</strong> <a href="tel:+12895887445">+1 (289) 588-7445</a></p>-->
+        <p>
+        <span class="icon phone-icon">
+          <!-- Mobile Phone SVG -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M7 2h10v20H7V2z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="12" cy="18" r="1" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="footer-phone">+1 (289) 588-7445</span>
+      </p>
+    <!--<p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/ashraf-iqbal-877b834" target="_blank" rel="noopener">https://linkedin.com/in/ashraf-iqbal-877b834</a></p>-->
+    <p>
+        <span class="icon linkedin-icon">
+          <!-- LinkedIn SVG -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M4 8h4v12H4V8zm2-6a2 2 0 110 4 2 2 0 010-4zM10 8h4v2.2c.6-1.1 1.9-2.2 4-2.2 3 0 5 2 5 6v6h-4v-6c0-2-.8-3-2.5-3S14 12 14 14v6h-4V8z" fill="currentColor"/>
+          </svg>
+        </span>
+        <a href="https://linkedin.com/in/ashraf-iqbal-877b834" target="_blank">
+          linkedin.com/in/ashraf-iqbal-877b834
+        </a>
+      </p>
+    <!--<p><strong>Website:</strong> <a href="https://www.ashrafconsulting.ca" target="_blank" rel="noopener">https://www.ashrafconsulting.ca</a></p>-->
+    <!-- ⭐ MINI DROP-A-LINE FORM ⭐ -->
+    <div class="footer-form">
+      <h4>Drop a Line</h4>
 
+      <form id="myForm" action="https://formspree.io/f/myzrnoyn" method="POST">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Your email" required>
+        <textarea name="message" rows="3" placeholder="Your message" required></textarea>
+        <!--<button type="submit">Send Message</button>-->
+        <button class="g-recaptcha" data-sitekey="6LeLuScsAAAAAIZFAHFYnV3Ii-RLOdxgAHXX7sRK"
+            data-callback='onSubmit' data-action='submit'>Submit</button>
+      </form>
+
+      <p class="footer-note">This form sends directly to my inbox. I respond promptly.</p>
+    </div>
   </main>
   
 <footer class="footer">
   <p>© 2025 Ashraf Consulting · Toronto, Canada</p>
-  <p>
+  <!--<p>
     <a href="mailto:ashraf@ashrafconsulting.ca">ashraf@ashrafconsulting.ca</a> · 
     <a href="https://linkedin.com/in/ashraf-iqbal-877b834" target="_blank" rel="noopener">LinkedIn</a>
-  </p>
+  </p>-->
 </footer>
 
 </body>
